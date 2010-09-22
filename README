@@ -4,8 +4,13 @@
 
 ## Installation
 
-* Install asciidoc (sudo apt-get install asciidoc)
+See redmine plugin installation howto.
+
+This plugin requires asciidoc (sudo apt-get install asciidoc).
 
 ## Notes
 
-This plugin was derived directly from Larry Baltz's [redmine\_markdown\_formatter](http://github.com/bitherder/redmine_markdown_formatter).
+This plugin was derived directly from:
+  * redmine_restructuredtext_formatter (http://github.com/alphabetum/redmine_restructuredtext_formatter.git)
+  * RbSt (http://rdoc.info/github/alphabetum/rbst)
+
