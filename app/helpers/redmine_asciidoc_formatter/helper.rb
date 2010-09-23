@@ -9,7 +9,7 @@ module RedmineAsciidocFormatter
 
       help_link = l(:setting_text_formatting) + ': ' +
                   link_to(l(:label_help), url,
-                  :onclick => "window.open(\"#{url}\", \"\", \"resizable=yes, location=no, width=300, height=640, menubar=no, status=no, scrollbars=yes\"); return false;")
+                  :onclick => "window.open(\"#{url}\", \"\", \"resizable=yes, location=no, menubar=no, status=no, scrollbars=yes\"); return false;")
 
       javascript_include_tag('jstoolbar/jstoolbar') +
         javascript_include_tag('asciidoc', :plugin => 'redmine_asciidoc_formatter') +
@@ -23,8 +23,8 @@ module RedmineAsciidocFormatter
 
     def heads_for_wiki_formatter
       #stylesheet_link_tag('asciidoc', :plugin => 'redmine_asciidoc_formatter')
-      javascript_include_tag('toc', :plugin => 'redmine_asciidoc_formatter') +
-        javascript_include_tag('footnote', :plugin => 'redmine_asciidoc_formatter')
+      javascript_include_tag('asciidoc-xhtml11', :plugin => 'redmine_asciidoc_formatter') +
+        javascript_include_tag('jquery-1.2.min', :plugin => 'redmine_asciidoc_formatter')
     end
   end
 end

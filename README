@@ -8,6 +8,9 @@ See redmine plugin installation howto.
 
 This plugin requires asciidoc (sudo apt-get install asciidoc).
 
+You should also install pygments (sudo apt-get install python-pygments) and 
+source-highlight (sudo apt-get install source-highlight)
+
 ## Notes
 
 This plugin was derived directly from:
