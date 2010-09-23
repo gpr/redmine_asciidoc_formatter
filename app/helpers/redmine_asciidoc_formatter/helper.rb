@@ -17,10 +17,6 @@ module RedmineAsciidocFormatter
         javascript_tag("var toolbar = new jsToolBar($('#{field_id}')); toolbar.setHelpLink('#{help_link}'); toolbar.draw();")
     end
 
-    def wikitoolbar_for(field_id)
-      nil
-    end
-
     def initial_page_content(page)
       "#{'='*page.pretty_title.length}\n#{page.pretty_title}\n#{'='*page.pretty_title.length}"
     end
