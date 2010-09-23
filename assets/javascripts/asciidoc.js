@@ -37,7 +37,7 @@ jsToolBar.prototype.elements.h0 = {
 	fn: {
 		wiki: function() {
 		  return this.encloseLineSelection('', '', function(str) {
-		    return str+"\n======================";
+		    return str+"\n====";
 		  });
 		}
 	}
@@ -48,7 +48,7 @@ jsToolBar.prototype.elements.h1 = {
 	fn: {
 		wiki: function() {
 		  return this.encloseLineSelection('', '', function(str) {
-		    return str+"\n----------------------";
+		    return str+"\n----";
 		  });
 		}
 	}
@@ -59,7 +59,7 @@ jsToolBar.prototype.elements.h2 = {
 	fn: {
 		wiki: function() {
 		  return this.encloseLineSelection('', '', function(str) {
-		    return str+"\n~~~~~~~~~~~~~~~~~~~~~~";
+		    return str+"\n~~~~";
 		  });
 		}
 	}
@@ -70,7 +70,7 @@ jsToolBar.prototype.elements.h3 = {
 	fn: {
 		wiki: function() {
 		  return this.encloseLineSelection('', '', function(str) {
-		    return str+"\n^^^^^^^^^^^^^^^^^^^^^^";
+		    return str+"\n^^^^";
 		  });
 		}
 	}
@@ -81,7 +81,7 @@ jsToolBar.prototype.elements.h4 = {
 	fn: {
 		wiki: function() {
 		  return this.encloseLineSelection('', '', function(str) {
-		    return str+"\n++++++++++++++++++++++";
+		    return str+"\n++++";
 		  });
 		}
 	}
@@ -128,53 +128,24 @@ jsToolBar.prototype.elements.bq = {
   fn: {
     wiki: function() {
       return this.encloseLineSelection('', '', function(str) {
-        return "-------------------------------\n"+str+"\n-------------------------------";
+        return "--------\n"+str+"\n--------";
       });
     }
   }
 }
 
-// unbq
-jsToolBar.prototype.elements.unbq = {
+// bq
+jsToolBar.prototype.elements.c = {
   type: 'button',
-  title: 'Unquote',
+  title: 'Code C',
   fn: {
     wiki: function() {
-      return  this.encloseLineSelection('','',function(str) {
-        return str.replace(/\r/g,'').
-                replace(/(<------------------------------->\n|\n-------------------------------)/g, '');
+      return this.encloseLineSelection('', '', function(str) {
+        return ".Optional Title\n[source,c]\n------------\n"+str+"\n--------";
       });
     }
   }
 }
-
-// pre
-jsToolBar.prototype.elements.pre = {
-	type: 'button',
-	title: 'Preformatted',
-	fn: {
-		wiki: function() {
-			this.encloseLineSelection('','',function(str) {
-				str = str.replace(/\r/g,'');
-				return str.replace(/(\n|^)\s*/g,"$1    ");
-			});
-		}
-	}
-}
-
-// unpre
-// jsToolBar.prototype.elements.unpre = {
-// 	type: 'button',
-// 	title: 'Un-preformatted',
-// 	fn: {
-// 		wiki: function() {
-// 			this.encloseLineSelection('','',function(str) {
-// 				str = str.replace(/\r/g,'');
-// 				return str.replace(/(\n|^)(\t|    )/g,"$1");
-// 			});
-// 		}
-// 	}
-// }
 
 // spacer
 jsToolBar.prototype.elements.space4 = {type: 'space'}
@@ -187,16 +158,4 @@ jsToolBar.prototype.elements.link = {
 		wiki: function() { this.encloseSelection("[[", "]]") }
 	}
 }
-// image
-jsToolBar.prototype.elements.img = {
-	type: 'button',
-	title: 'Image',
-	fn: {
-          wiki: function() {
-                  this.encloseSelection('', '', function(str) {
-                    altText = str.replace(/^\/?(?:[^\/]*\/)*([^\/]*)$/, '$1');
-                    return '!['+altText+']('+str+')';
-                  });
-                }
-	}
-}
+
