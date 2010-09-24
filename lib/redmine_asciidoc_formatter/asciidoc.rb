@@ -2,7 +2,7 @@ require 'open3'
 
 class AsciiDoc
   
-  @@asciidoc = "asciidoc -a toc -a icons -a iconsdir='/redmine/images/icons' -a '/redmine/images' -s"
+  @@asciidoc = "asciidoc -a toc -a icons -a iconsdir='/redmine/images/icons' -a imagesdir='/redmine/images'"
   
   # Takes a string or file path plus any additional options and converts the input.
   def self.to_html(*args)
@@ -18,7 +18,7 @@ class AsciiDoc
     
   # Converts the object's input to HTML.
   def to_html(*args)
-    # @options += args
+    @options += args
     command = "#@@asciidoc #@options -"
     execute command
   end

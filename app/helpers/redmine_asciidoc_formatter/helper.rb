@@ -22,9 +22,9 @@ module RedmineAsciidocFormatter
     end
 
     def heads_for_wiki_formatter
-      #stylesheet_link_tag('asciidoc', :plugin => 'redmine_asciidoc_formatter')
-      javascript_include_tag('asciidoc-xhtml11', :plugin => 'redmine_asciidoc_formatter') +
-        javascript_include_tag('jquery-1.2.min', :plugin => 'redmine_asciidoc_formatter')
+      stylesheet_link_tag('asciidoc-xhtml11', :plugin => 'redmine_asciidoc_formatter') + 
+        javascript_include_tag('toc-footnote', :plugin => 'redmine_asciidoc_formatter') + 
+        javascript_include_tag('asciidoc-xhtml11', :plugin => 'redmine_asciidoc_formatter')
     end
   end
 end
