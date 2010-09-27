@@ -18,11 +18,12 @@ module RedmineAsciidocFormatter
     end
 
     def initial_page_content(page)
-      "#{'='*page.pretty_title.length}\n#{page.pretty_title}\n#{'='*page.pretty_title.length}"
+      "#{page.pretty_title}\n#{'='*page.pretty_title.length}"
     end
 
     def heads_for_wiki_formatter
-      stylesheet_link_tag('asciidoc-xhtml11', :plugin => 'redmine_asciidoc_formatter') + 
+      stylesheet_link_tag('jstoolbar') +
+        stylesheet_link_tag('asciidoc-xhtml11', :plugin => 'redmine_asciidoc_formatter') + 
         javascript_include_tag('toc-footnote', :plugin => 'redmine_asciidoc_formatter') + 
         javascript_include_tag('asciidoc-xhtml11', :plugin => 'redmine_asciidoc_formatter')
     end

@@ -1,7 +1,5 @@
 # Redmine Asciidoc Formatter
 
-## Notes
-
 ## Installation
 
 See redmine plugin installation howto.
@@ -9,7 +7,21 @@ See redmine plugin installation howto.
 This plugin requires asciidoc (sudo apt-get install asciidoc).
 
 You should also install pygments (sudo apt-get install python-pygments) and 
-source-highlight (sudo apt-get install source-highlight)
+source-highlight (sudo apt-get install source-highlight).
+
+## Documentation
+
+The formattter supports all asciidoc standard syntaxes. It supports also Redmine macros
+( `{{Macro()}}`, automatic links (#<ID>, source:<path/to/file>, commit:<ref>...) and also a
+new syntax for wiki links:
+ wiki:<WikiPageName> where <WikiPageName> is the name of the linked wiki page.
+
+## Known Limitations
+
+The inclusion of the ToC is automatic but that causes a issue; the ToC is included 
+everywhere, even for issue descriptions and project summaries.
+
+The ToC is sometimes not generated (no root cause identified).
 
 ## Notes
 
