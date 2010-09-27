@@ -8,7 +8,7 @@ Redmine::Plugin.register :redmine_asciidoc_formatter do
   author 'Gregory Romé'
   author_url 'http://github.com/gpr/redmine_asciidoc_formatter'
   description 'Asciidoc wiki formatting for Redmine'
-  version '0.2.0'
+  version '0.2.1'
 
   requires_redmine :version_or_higher => '1.0'
 
