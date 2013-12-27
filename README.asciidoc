@@ -3,15 +3,15 @@
 Redmine Asciidoc Formatter
 ==========================
 Gregory Romé
-v0.3.1, 28-sep-2010
+v0.4.0, 27-dec-2013
 
-Copyright (C) 2010  Gregory Romé
+Copyright (C) 2010-2013  Gregory Romé
 
 License
 -------
 
 --------------------------------------------------------------------------------
-Copyright (C) 2010  Gregory Romé
+Copyright (C) 2010-2013  Gregory Romé
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -31,7 +31,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 Installation
 ------------
 
-See redmine plugin installation howto.
+See redmine plugin installation howto. The current +master+ branch targets Redmine +2.3.x+.
 
 This plugin requires asciidoc (+sudo apt-get install asciidoc+).
 
