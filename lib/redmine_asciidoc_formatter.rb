@@ -1,3 +1,4 @@
+# encoding: utf-8
 module RedmineAsciidocFormatter
   extend ActionView::Helpers
   class << self

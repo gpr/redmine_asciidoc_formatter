@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'redmine_asciidoc_formatter/asciidoc'
 
 module RedmineAsciidocFormatter::WikiFormatting
