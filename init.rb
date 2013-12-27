@@ -1,16 +1,16 @@
+# encoding: utf-8
 # Redmine Asciidoc formatter
 require 'redmine'
-
-RAILS_DEFAULT_LOGGER.info 'Starting Asciidoc formatter for Redmine'
+require 'redmine_asciidoc_formatter'
 
 Redmine::Plugin.register :redmine_asciidoc_formatter do
   name 'Asciidoc formatter'
   author 'Gregory Romé'
-  author_url 'http://github.com/gpr/redmine_asciidoc_formatter'
   description 'Asciidoc wiki formatting for Redmine'
-  version '0.2.1'
+  version '0.3.0'
+  author_url 'http://github.com/gpr/redmine_asciidoc_formatter'
 
-  requires_redmine :version_or_higher => '1.0'
+  wiki_format_provider 'asciidoc', RedmineAsciidocFormatter::WikiFormatting::Formatter,
+                       RedmineAsciidocFormatter::WikiFormatting::Helper
 
-  wiki_format_provider 'asciidoc', RedmineAsciidocFormatter::WikiFormatter, RedmineAsciidocFormatter::Helper
 end
